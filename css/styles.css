@@ -140,19 +140,19 @@ just for appearance; change whatever you want
 }
 
 /* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
-.slide:nth-of-type(2){
+/*.slide:nth-of-type(2){
   background-color: red;
-  background-image: url('images/IMG_2894.png' /*'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg'*/);
+  background-image: url('images/IMG_2894.png' /*'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg'*);
 background-size: cover;
 }
 
-/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg *
 .slide:nth-of-type(7){
   background-color: orange;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
 }
 
-/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg *
 .slide:nth-of-type(8){
   background-color: green;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
@@ -201,7 +201,7 @@ background-size: cover;
 .slide:nth-of-type(17){
   background-color: green;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
-}
+}*/
 
 .controls{
   background: #00000038/*#333*/;
