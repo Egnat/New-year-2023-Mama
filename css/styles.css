@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width : 0.1px; 
+  height: 5px;
+  pacity: 0.02;
+} /* УБРАЛ ПОЛОСУ ПРОКРУТКИ С ЭКРАНА и сделал свою. 
+Когда пишу сайт, чтобы на планшете отображалось содержимое от края до края страницы 
+без зазоров, прокрутку можно отключить. И включить для красоты по готовности сайта.*/
+
+::-webkit-scrollbar-button {height: 50px; background :#42e10e; }  /*2 - кнопка*/  
+
+::-webkit-scrollbar-track {background: #274dd7; }  /*3 - трек */ 
+
+::-webkit-scrollbar-track-piece { background: #e91e63;}  /*4 - видимая часть трека */ 
+
+::-webkit-scrollbar-thumb {background: #fbe100; border-radius: 10px;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /*inset 1 3 13px rgb(207 10 10 / 64%)*/} /*5 - ползунок */ 
+
+/*настраивает полосу прокрутки с помощью вэбкит. С этими еще не разобрался*/
+
+/*::-webkit-scrollbar{ width: 22px; } /*1 - вертикальный скроллбар*/
+
+/*::-webkit-scrollbar:horizontal{ height: 22px;  }  /*1 - горизонтальный скроллбар*/
+
+/*::-webkit-scrollbar-button {background :#e50845; }  /*2 - кнопка*/  
+
+/*::-webkit-scrollbar-track {background: #008000; }  /*3 - трек */ 
+
+/*::-webkit-scrollbar-track-piece { background: #32CD32;}  /*4 - видимая часть трека */ 
+
+/*::-webkit-scrollbar-thumb {background: #322e76; border-radius: 10px;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); } /*5 - ползунок */ 
+
+/*::-webkit-scrollbar-corner {: #32CD32; }  6 - уголок */
+
+/*::-webkit-resizer { : #32CD32; } 7 - изменение размеров*/ 
+
+
+body {
+margin: 0 auto;  
+box-sizing: border-box;
+background-image: url(https://acegif.com/wp-content/uploads/gif/snwflks-53.gif);
+background-size: cover;
+}
+
+
+
+.filterChristmasVinok {
+position: absolute;
+width: 84px;
+height: 84px;
+top: 4px;
+left: 1195px;
+border-radius: 72px;
+background-image: url(https://cdn1.ozone.ru/s3/multimedia-e/6161365406.jpg);
+background-size: cover;
+}
+
+.sectionSlider {
+position: absolute;
+display: flex;
+width: 1280px;
+height: 945px;
+top: 1458p;
+left: 130p;
+background-image: url(https://i.pinimg.com/originals/f0/6d/24/f06d24a28474a6040c76b41d80a88543.gif);/*изображени герлянды под задний фон слайдера*/
+ackground-image: url(https://acegif.com/wp-content/uploads/gif/snwflks-53.gif);
+background-size: cover;
+ox-shadow: 0px 0px 31px 28px beige;
+}
+
+.sliderWrapFlex {
+position: absolute;
+display: flex;
+width: 962px;
+height: 668px;
+top: 144px;
+left: 153px;
+background-color: #000;
+box-shadow:0px 0px 101px 33px beige;
+}
+
+.container{
+position: absolute;
+width: 962px; 
+height: 668px;
+}
+
+#slides{
+  position: relative;
+  width: 962px;
+  height: 668px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;/* убрали точки у лишек*/
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+.controls{
+  display: none;
+}
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+  padding: 40p;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  background-size: cover;
+  font-size: 40px;
+}
+
+/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+.slide:nth-of-type(2){
+  background-color: red;
+  background-image: url('images/IMG_2894.png' /*'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg'*/);
+background-size: cover;
+}
+
+/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+.slide:nth-of-type(7){
+  background-color: orange;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
+}
+
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+.slide:nth-of-type(8){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(9){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(10){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(11){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(12){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(13){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(14){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(15){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(16){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.slide:nth-of-type(17){
+  background-color: green;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
+}
+
+.controls{
+  background: #00000038/*#333*/;
+  color: #fff;
+  border: none;
+  padding: 20px 0px;
+  font-size: 20px;
+  cursor: pointer;
+  order: 2px solid #fff;
+  margin: 10px 0px 0px 10px;
+  width: 70p;
+  ransition: background-color 0.6s ease;
+  transition: opacity 0.4s ease;
+  opacity: 0;  
+}
+
+.controls:hover,
+.controls:focus{
+  /*background: #eee;
+  color: #333;*/
+  opacity: 1; 
+}
+
+.buttons{
+  position: absolute;
+  display: fle;
+  left: -10px;
+  top: -10px;
+  z-index: 10;
+  font-size: 0px;
+}
+
+.textSlide {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 962px;
+height: 50px;
+color: white;
+background-color: #00000017;
+font-size: 30px;
+font-weight: bold;
+font-style: italic;
+z-index: 1;
+}
+
+.textTwoSlide {
+position: absolute;
+width: 254px;
+bottom: 589px;
+left: 607px;
+
+font-family: Pacifico;
+font-size: 32px;
+font-weight: bold;
+font-style: ;
+color: red;
+}
+
+.filterimgSlide {
+width: 962px/*100%*/;
+height: 668px/*100%*/;  
+filter: brightness(0.7);
+}
+
+.imgSlide {
+width: /*962px*/60%;
+height: /*668px*/100%;
+}
+
+.imgSeven {
+position: absolute;
+width: 50%;
+height: 100%;
+}
+
+.sectionIframeNewYear {
+position: absolute;
+width: 1280px;
+height: 487px;
+top: 945px;
+background-image: url(https://acegif.com/wp-content/uploads/gif/snwflks-53.gif);
+background-size: cover;
+}
+
+.listSectionIframeNewYear {
+osition: absolute;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 74px;
+
+font-family: 'Pacifico', cursive; 
+font-size: 50px;
+font-weight: bold;
+ont-style: italic;
+list-style: none;
+color: white;
+}
+
+.item {}
+
+.filterGoingSanta {
+position: absolute;
+width: 353p;
+height: 447p;
+top: 74px;
+ackground-image: url(https://r3.mt.ru/u1/photo011B/20913694863-0/original.gif);
+ackground-size: cover;
+} 
+
+.goingSanta {
+width: 353px;
+height: 387px;
+}
+
+.filterdansingSanta {
+position: absolute;
+top: 0px;
+left: 624px;
+z-index: 1;
+}
+
+.dansingSanta {
+width: 80px;
+height: 80px;
+}
+
+.iframeNewYear {
+position: absolute;
+width: 641px;
+height: 373px;
+top: 74px;
+left: 354px;
+}
+
+.filterShowMen {
+position: absolute;
+width: 285px;
+height: 374px;
+top: 74px;
+left: 995px;
+background-image: url(https://i.pinimg.com/originals/0d/76/f2/0d76f243fce1f9da29561410524d77f9.gif);
+background-size: cover;
+}
+
+showmen {
+width: 100px;
+height: 100px;
+}
+
+.filterFatherChristmasAndShowMaiden {
+position: absolute;
+width: 1280px; 
+height: 1679px/*190%*/;
+top: 1393px;
+background-image: url(https://r1.mt.ru/u1/photo2560/20590569051-0/original.gif);
+background-size: cover; /*очень болшая получается и не во весь рост*/
+}
+
+.textimgFatherChristmas {
+position: absolute;
+width: 1023px;
+top: 3px;
+left: 131px;
+
+color: white; 
+font-style: italic;    
+font-size: 89px;    
+font-weight: bold;
+ext-shadow: 8px -5px 1px;
+}
+
+imgFatherChristmasAndShowMaiden {
+width: 1280px;
+height: 1316px;
+}
+
+.filterCatInCap {
+position: absolute;
+top: 1384px;
+left: 294px;
+}
+
+.cat-in-cap {
+width: 279px;
+height: 283px;
+}
+
+
+
+/*
+.sliderWrapFlex {
+position: absolute;
+display: flex;
+width: 764px;
+height: 572px;
+top: 2135p;
+left: 269px;
+box-shadow: 0px 0px 199px 28px beige;
+}
+
+#slides{
+position: absolute;
+width: 764px;
+height: 572px;
+padding: 0px;
+border: 2px solid #ffae00;
+margin: 0px; 
+text-align: center;
+list-style-type: none;    
+}
+
+.controls {
+position: absolute;
+width: 201px;
+height: 37px;
+top: 647px;
+left: 291px;
+outline: none;
+border: 4px solid #13dd13;
+background-color: #8a2be2;
+cursor: pointer;
+
+font-family: 'Yeseva One';
+font-size: 18px;
+font-style: italic;
+line-height: 25px;
+text-align: center;
+color: white;
+}
+
+.slide{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+opacity: 0;
+z-index: 1;
+
+-webkit-transition: opacity 1s;
+-moz-transition: opacity 1s;
+-o-transition: opacity 1s;
+transition: opacity 1s;
+}
+
+.showing{
+opacity: 1;
+z-index: 2;
+}
+
+.slide{
+padding: 40p;
+ackground: #333;
+font-size: 40px;
+box-sizing: border-box;
+color: #fff;
+}
+
+/*На них ругается вэбпак
+.slide:nth-of-type(1){
+background: blue;
+}
+.slide:nth-of-type(2){
+  background: orange;
+}
+.slide:nth-of-type(3){
+  background: green;
+}
+
+.filter_img {filter: brightness(0.7);}
+
+.imagesSlide {
+width: 764px;
+height:572px;/*в этом слайдере я добавил имж в ли, в штмли, можно сделать у фотки меньше высоту и прописать бэкграунд slide:nth-of-type(8), будет внизу полоска, где можно красиво оформить текст*
+}
+
+.number {
+position: absolute;
+bottom: 0px;
+}
+
+.h1 {
+position: absolute;
+width: 130px;
+right: 895px;
+bottom: 182px;
+margin: 0 auto;
+color: darkred;
+z-index: 1;  
+font-family: 'Pacifico', cursive; 
+font-display: fallback;   
+}*/
+
+
+@media screen and (max-width: 1300px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 425px) {}
+
+@media screen and (max-width: 375px) {}
